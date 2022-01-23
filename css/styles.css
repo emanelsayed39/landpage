@@ -10,7 +10,34 @@
 
 
 /* ---- Base Rules ---- */
-
+.navbar__menu {
+    overflow: hidden;
+    background-color: rgb(107, 106, 106);
+  }
+.navbar__menu .icon {
+    display: none;
+    
+  } 
+  @media  screen and (max-width: 600px){
+  .navbar__menu ul li{display: none;}
+  .navbar__menu  .icon {
+    float: right;
+    display: block;
+  }
+} 
+@media screen and (max-width: 600px) {
+    .navbar__menu.responsive {position: relative;}
+    .navbar__menu.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar__menu.responsive ul li{
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
 html{
     scroll-behavior: smooth;
 }
@@ -93,7 +120,7 @@ section {
 }
 
 .navbar__menu .active__menu {
-    background: #333;
+    background:#04AA6D;
     color: #fff;
     transition: ease 0.3s all;
 }
