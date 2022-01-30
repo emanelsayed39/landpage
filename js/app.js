@@ -1,9 +1,4 @@
-
-
-
-
-
- /**  Define Global Variables*/
+/**  Define Global Variables*/
 const sections=document.getElementsByTagName('section');
 const mainMenu=document.querySelector('nav');
 const menu=mainMenu.querySelector('ul');
@@ -44,7 +39,7 @@ const goToSection=(event)=>{
     section.scrollIntoView({block: "center",behavior: "smooth"});
 }
 
-/**intersection Observer function ,work when new element get into the view point*/
+/**intersection observer function ,work when new element get into the view point*/
 let observer = new IntersectionObserver((entries,observer) => { 
     entries.forEach(entry => {
         if(entry.intersectionRatio >=.3){
